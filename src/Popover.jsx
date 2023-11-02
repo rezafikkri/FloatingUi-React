@@ -19,7 +19,7 @@ export default function Popover() {
   const {refs, floatingStyles, context} = useFloating({
     open: isOpen,
     onOpenChange: setIsOpen,
-    middleware: [offset(10), flip(), shift()],
+    middleware: [offset(10), flip(), shift({ padding: 5 })],
     whileElementsMounted: autoUpdate,
   });
 
@@ -57,7 +57,7 @@ export default function Popover() {
           {...getFloatingProps()}
         >
           <div style={{...styles}} className="floating">
-            Popover element
+            Popover element hay hay hay test
           </div>
         </div>
       )}
